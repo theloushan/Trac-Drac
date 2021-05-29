@@ -1,0 +1,8 @@
+H:\Godot\Projects\DraculaRunner\.mono\temp\bin\Debug\Dracula Runner.dll
+H:\Godot\Projects\DraculaRunner\.mono\temp\bin\Debug\Dracula Runner.pdb
+H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.csprojAssemblyReference.cache
+H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.AssemblyInfoInputs.cache
+H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.AssemblyInfo.cs
+H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.csproj.CoreCompileInputs.cache
+H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.dll
+H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.pdb
