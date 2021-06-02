@@ -17,6 +17,7 @@ func _physics_process(_delta):
 	get_input()
 	velocity = position.direction_to(target) * speed
 	if position.distance_to(target) > 5:
+		#position = position.clamped(160)
 		velocity = move_and_slide(velocity)
 
 # Called when the node enters the scene tree for the first time.

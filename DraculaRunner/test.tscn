@@ -19,9 +19,9 @@ _data = {
 [node name="Node2D" type="Node2D"]
 
 [node name="testMouse" type="KinematicBody2D" parent="."]
-position = Vector2( 69.9245, 51.9137 )
+position = Vector2( 600, 250 )
 script = ExtResource( 2 )
-speed = 750
+speed = 1000
 
 [node name="testMouseSprite" type="Sprite" parent="testMouse"]
 position = Vector2( -0.117477, 0.124184 )
@@ -47,7 +47,7 @@ script = ExtResource( 3 )
 speed = 750
 
 [node name="testCharacter" type="KinematicBody2D" parent="."]
-position = Vector2( 143.603, 407.259 )
+position = Vector2( 145, 410 )
 script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="testCharacter"]
