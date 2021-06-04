@@ -1,10 +1,24 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://testMouseScript.gd" type="Script" id=2]
 [ext_resource path="res://pathingTest.gd" type="Script" id=3]
-[ext_resource path="res://sigurd.png" type="Texture" id=4]
-[ext_resource path="res://testController.gd" type="Script" id=5]
+[ext_resource path="res://assets/imgs/sprites/standing.png" type="Texture" id=4]
+[ext_resource path="res://Sprite.gd" type="Script" id=5]
+[ext_resource path="res://assets/imgs/health/Dracula Health - Healthy.png" type="Texture" id=6]
+[ext_resource path="res://Health.gd" type="Script" id=7]
+[ext_resource path="res://assets/imgs/sprites/run2.png" type="Texture" id=8]
+[ext_resource path="res://assets/imgs/sprites/cover3.png" type="Texture" id=9]
+[ext_resource path="res://assets/imgs/sprites/cover1.png" type="Texture" id=10]
+[ext_resource path="res://assets/imgs/sprites/cover4.png" type="Texture" id=11]
+[ext_resource path="res://assets/imgs/sprites/fly3.png" type="Texture" id=12]
+[ext_resource path="res://assets/imgs/sprites/run3.png" type="Texture" id=13]
+[ext_resource path="res://assets/imgs/sprites/run4.png" type="Texture" id=14]
+[ext_resource path="res://assets/imgs/sprites/fly4.png" type="Texture" id=15]
+[ext_resource path="res://assets/imgs/sprites/cover2.png" type="Texture" id=16]
+[ext_resource path="res://assets/imgs/sprites/fly2.png" type="Texture" id=17]
+[ext_resource path="res://assets/imgs/sprites/run1.png" type="Texture" id=18]
+[ext_resource path="res://assets/imgs/sprites/fly5.png" type="Texture" id=19]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32.1677, 32.002 )
@@ -13,6 +27,29 @@ extents = Vector2( 32.1677, 32.002 )
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 1536.61, 191.022, 0, 0, 0, 0, -454.967, 191.047 )
 }
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 16 ), ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "cover",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 12 ), ExtResource( 15 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "fly",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ), ExtResource( 8 ), ExtResource( 13 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=3]
 
@@ -46,16 +83,77 @@ texture = ExtResource( 1 )
 script = ExtResource( 3 )
 speed = 750
 
-[node name="testCharacter" type="KinematicBody2D" parent="."]
-position = Vector2( 145, 410 )
+[node name="Sprite" type="AnimatedSprite" parent="."]
+position = Vector2( 145, 330 )
+scale = Vector2( 0.2, 0.2 )
+frames = SubResource( 5 )
+animation = "run"
+frame = 1
 script = ExtResource( 5 )
 
-[node name="Sprite" type="Sprite" parent="testCharacter"]
-position = Vector2( 0, -80 )
-scale = Vector2( 2.5, 4 )
-texture = ExtResource( 4 )
+[node name="Character" type="Area2D" parent="."]
+position = Vector2( 145, 410 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="testCharacter"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
 position = Vector2( 0, -80 )
 scale = Vector2( 6.75, 11.25 )
 shape = SubResource( 3 )
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 131.328
+margin_top = -297.755
+margin_right = 2191.33
+margin_bottom = 214.245
+grow_horizontal = 2
+grow_vertical = 2
+rect_scale = Vector2( 0.18388, 0.18388 )
+custom_constants/separation = 4
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health1" type="TextureRect" parent="HUD/HBoxContainer"]
+margin_right = 512.0
+margin_bottom = 512.0
+texture = ExtResource( 6 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health2" type="TextureRect" parent="HUD/HBoxContainer"]
+margin_left = 516.0
+margin_right = 1028.0
+margin_bottom = 512.0
+texture = ExtResource( 6 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health3" type="TextureRect" parent="HUD/HBoxContainer"]
+margin_left = 1032.0
+margin_right = 1544.0
+margin_bottom = 512.0
+texture = ExtResource( 6 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Health4" type="TextureRect" parent="HUD/HBoxContainer"]
+margin_left = 1548.0
+margin_right = 2060.0
+margin_bottom = 512.0
+texture = ExtResource( 6 )
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
