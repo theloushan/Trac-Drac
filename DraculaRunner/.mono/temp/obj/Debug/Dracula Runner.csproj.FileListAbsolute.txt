@@ -14,3 +14,11 @@ C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dr
 C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.csproj.CoreCompileInputs.cache
 C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.dll
 C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.pdb
+C:\Users\Cory P\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\bin\Debug\Dracula Runner.dll
+C:\Users\Cory P\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\bin\Debug\Dracula Runner.pdb
+C:\Users\Cory P\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.csproj.AssemblyReference.cache
+C:\Users\Cory P\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.AssemblyInfoInputs.cache
+C:\Users\Cory P\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.AssemblyInfo.cs
+C:\Users\Cory P\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.csproj.CoreCompileInputs.cache
+C:\Users\Cory P\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.dll
+C:\Users\Cory P\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.pdb
