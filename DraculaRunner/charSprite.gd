@@ -9,21 +9,20 @@ var t = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
 	act_pos = (get_viewport().get_mouse_position() - self.position)
-	charS_act = act_pos.y / 100
+	charS_act = act_pos.y / 100 / 3
 	
-	#t+=1
-	#if t == 60:
-	#	print(charS_act)
-	#	t=0
+	t+=1
+	if t == 60:
+		print(charS_act)
+		t=0	
 	
-	
-	if Input.is_action_pressed("ui_select") && charS_act < 3:
+	if Input.is_action_pressed("ui_select") && charS_act < 1:
 		_animated_sprite.play("fly")
 		
-	elif Input.is_action_pressed("ui_select") && charS_act > 6:
+	elif Input.is_action_pressed("ui_select") && charS_act > 2:
 		_animated_sprite.play("slide")
 		
-	elif Input.is_action_pressed("ui_select") && charS_act < 6 && charS_act > 3 :
+	elif Input.is_action_pressed("ui_select") && charS_act > 1 && charS_act < 2 :
 		_animated_sprite.play("cover")
 		
 	else:
