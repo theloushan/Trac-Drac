@@ -6,3 +6,11 @@ H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.AssemblyInfo
 H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.csproj.CoreCompileInputs.cache
 H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.dll
 H:\Godot\Projects\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.pdb
+C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\bin\Debug\Dracula Runner.dll
+C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\bin\Debug\Dracula Runner.pdb
+C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.csproj.AssemblyReference.cache
+C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.AssemblyInfoInputs.cache
+C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.AssemblyInfo.cs
+C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.csproj.CoreCompileInputs.cache
+C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.dll
+C:\Users\conno\Documents\GitHub\CCsbig2021\DraculaRunner\.mono\temp\obj\Debug\Dracula Runner.pdb

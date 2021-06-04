@@ -1,11 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PhHYbfXsPVwqcdbeUeG9sFOviN+QAMmeIoZcyR7lzeCyhpU1TR6oCardY3MuRWdw76HJGBkel6iimYGX1f9hzA==",
+  "dgSpecHash": "/Ex4zOdgVHjlgWLujoavB5WoZGJvZV6JVEo6OP24Hj3Pt1GtoN1Jc3mHwBl0RxBEMrdzR5ryqfR2hu65woro3A==",
   "success": true,
-  "projectFilePath": "H:\\Godot\\Projects\\DraculaRunner\\Dracula Runner.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Nick\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
-    "C:\\Users\\Nick\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.0\\microsoft.netframework.referenceassemblies.net472.1.0.0.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\conno\\Documents\\GitHub\\CCsbig2021\\DraculaRunner\\Dracula Runner.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
