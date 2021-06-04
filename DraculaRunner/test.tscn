@@ -83,16 +83,16 @@ texture = ExtResource( 1 )
 script = ExtResource( 3 )
 speed = 750
 
-[node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 145, 330 )
+[node name="Character" type="Area2D" parent="."]
+position = Vector2( 145, 410 )
+
+[node name="Sprite" type="AnimatedSprite" parent="Character"]
+position = Vector2( 0, -80 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 5 )
 animation = "run"
 frame = 1
 script = ExtResource( 5 )
-
-[node name="Character" type="Area2D" parent="."]
-position = Vector2( 145, 410 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
 position = Vector2( 0, -80 )
