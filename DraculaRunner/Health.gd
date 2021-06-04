@@ -16,12 +16,17 @@ var health_bump3 = preload("res://assets/imgs/health/Dracula Health - Bump3.png"
 #functions
 func update_health(value):
 	for i in get_child_count():
+		get_child(i).visible = value > i
 		if value == 4:
 			get_child(i).texture = health_healthy
 		elif value == 3:
 			get_child(i).texture = health_bump1
+			if i ==2:
+				break
 		elif value == 2:
 			get_child(i).texture = health_bump2
+			if i == 1:
+				break
 		elif value == 1:
 			get_child(i).texture = health_bump3
 		
