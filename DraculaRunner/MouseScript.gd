@@ -15,8 +15,6 @@ var action_idle = preload("res://assets/imgs/sprites/standing.png")
 
 var act_pos
 var actS_act
-var t=0
-
 
 # Called when the node enters the scene tree for the first time.
 func get_input():
@@ -25,8 +23,6 @@ func get_input():
 	
 func _on_Character_action(charS_act):
 	actS_act = charS_act
-	if t == 60:
-		print(actS_act, "Act")
 	set_texture(actS_act)
 
 func set_texture(actS_act):
@@ -53,9 +49,5 @@ func _physics_process(_delta):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:	
-	t+=1
-	if t == 60:
-		t=0	
-	
 	get_parent().get_node("Character").connect("action", self, "_on_Character_action")
 	

@@ -4,7 +4,7 @@ extends KinematicBody2D
 onready var animated_sprite = $charSprite
 var act_pos
 var charS_act
-var t = 0
+
 signal action(charS_act)
 
 func set_animation(charS_act):
@@ -26,9 +26,4 @@ func _physics_process(_delta: float) -> void:
 	charS_act = act_pos.y / 100
 	emit_signal("action", charS_act)
 	set_animation(charS_act)
-	
-	t+=1
-	if t == 60:
-		print(charS_act, "charS")
-		t=0	
 	
