@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Godot\\Projects\\DraculaRunner\\Dracula Runner.csproj": {}
+    "C:\\Users\\Cory P\\Documents\\GitHub\\CCsbig2021\\DraculaRunner\\Dracula Runner.csproj": {}
   },
   "projects": {
-    "H:\\Godot\\Projects\\DraculaRunner\\Dracula Runner.csproj": {
+    "C:\\Users\\Cory P\\Documents\\GitHub\\CCsbig2021\\DraculaRunner\\Dracula Runner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Godot\\Projects\\DraculaRunner\\Dracula Runner.csproj",
+        "projectUniqueName": "C:\\Users\\Cory P\\Documents\\GitHub\\CCsbig2021\\DraculaRunner\\Dracula Runner.csproj",
         "projectName": "Dracula Runner",
-        "projectPath": "H:\\Godot\\Projects\\DraculaRunner\\Dracula Runner.csproj",
-        "packagesPath": "C:\\Users\\Nick\\.nuget\\packages\\",
-        "outputPath": "H:\\Godot\\Projects\\DraculaRunner\\.mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\Cory P\\Documents\\GitHub\\CCsbig2021\\DraculaRunner\\Dracula Runner.csproj",
+        "packagesPath": "C:\\Users\\Cory P\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Cory P\\Documents\\GitHub\\CCsbig2021\\DraculaRunner\\.mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Nick\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Cory P\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,6 +26,7 @@
         },
         "frameworks": {
           "net472": {
+            "targetAlias": "net472",
             "projectReferences": {}
           }
         },
@@ -40,14 +38,8 @@
       },
       "frameworks": {
         "net472": {
-          "dependencies": {
-            "Microsoft.NETFramework.ReferenceAssemblies": {
-              "target": "Package",
-              "version": "[1.0.0, )",
-              "autoReferenced": true
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.409\\RuntimeIdentifierGraph.json"
+          "targetAlias": "net472",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
