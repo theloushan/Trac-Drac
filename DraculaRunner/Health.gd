@@ -23,14 +23,10 @@ func update_health(value):
 			get_child(i).texture = health_healthy
 		elif value == 3:
 			get_child(i).texture = health_bump1
-			if i ==2:
-				break
 		elif value == 2:
 			get_child(i).texture = health_bump2
-			if i == 1:
-				break
 		elif value == 1:
-			get_child(i).texture = health_bump3
+			get_child(i).texture = health_bump3  
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):

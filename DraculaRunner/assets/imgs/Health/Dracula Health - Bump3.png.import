@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dracula Health - Bump3.png-1c5d0902cabefacd8e3f7c454f2e1967.stex"
+path="res://.import/Dracula Health - Bump3.png-4218c785d3797a6202a38dfe3dbc6afd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/imgs/Health/Dracula Health - Bump3.png"
-dest_files=[ "res://.import/Dracula Health - Bump3.png-1c5d0902cabefacd8e3f7c454f2e1967.stex" ]
+source_file="res://assets/imgs/health/Dracula Health - Bump3.png"
+dest_files=[ "res://.import/Dracula Health - Bump3.png-4218c785d3797a6202a38dfe3dbc6afd.stex" ]
 
 [params]
 
