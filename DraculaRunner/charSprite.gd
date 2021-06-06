@@ -73,8 +73,8 @@ func health_update():
 
 func _on_Area2D_body_entered(body):
 	#print("in sunlight, out of if")
-	if body.is_in_group("sunlight") and current_state != "cover":
-		health_update()
+	#if body.is_in_group("sunlight") and current_state != "cover":
+	#	health_update()
 	
 	if body.is_in_group("obstacle"):
 		health_update()

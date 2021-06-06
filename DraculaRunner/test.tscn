@@ -204,7 +204,7 @@ position = Vector2( 872.923, 57.2928 )
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK2"]
-position = Vector2( 1.54822, -0.793671 )
+position = Vector2( 1.54804, -3.03854 )
 shape = SubResource( 5 )
 
 [node name="sunlightK3" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
@@ -450,6 +450,7 @@ rotation = -3.14157
 collision_layer = 2
 
 [node name="obstacle" type="AnimatedSprite" parent="testEnviroPath/testEnviroFollow/jumpP3"]
+position = Vector2( 181.719, 13.4487 )
 rotation = 3.14157
 scale = Vector2( 0.086, 0.086 )
 frames = SubResource( 2 )
@@ -457,7 +458,7 @@ animation = "puppy"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpP3"]
-position = Vector2( 9.8584, -0.594604 )
+position = Vector2( 191.587, 12.8544 )
 shape = SubResource( 12 )
 
 [node name="slideB3" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
@@ -468,6 +469,7 @@ rotation = -3.14157
 collision_layer = 2
 
 [node name="obstacle" type="AnimatedSprite" parent="testEnviroPath/testEnviroFollow/slideB3"]
+position = Vector2( -514.531, -2.1853 )
 rotation = 3.14157
 scale = Vector2( 0.0877162, 0.0855502 )
 frames = SubResource( 2 )
@@ -475,6 +477,7 @@ animation = "balloon"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideB3"]
+position = Vector2( -514.53, -2.18687 )
 shape = SubResource( 3 )
 
 [node name="slideB4" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
@@ -485,6 +488,7 @@ rotation = -3.14157
 collision_layer = 2
 
 [node name="obstacle" type="AnimatedSprite" parent="testEnviroPath/testEnviroFollow/slideB4"]
+position = Vector2( -532.047, 0.0617676 )
 rotation = 3.14157
 scale = Vector2( 0.0877162, 0.0855502 )
 frames = SubResource( 2 )
@@ -492,6 +496,7 @@ animation = "balloon"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideB4"]
+position = Vector2( -532.045, 0.0600281 )
 shape = SubResource( 3 )
 
 [node name="slideT2" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
@@ -521,6 +526,7 @@ rotation = -3.14157
 collision_layer = 2
 
 [node name="obstacle" type="AnimatedSprite" parent="testEnviroPath/testEnviroFollow/jumpT4"]
+position = Vector2( 221.141, 24.6685 )
 rotation = 3.14157
 scale = Vector2( 0.0877162, 0.0855502 )
 frames = SubResource( 2 )
@@ -528,7 +534,7 @@ animation = "trash"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpT4"]
-position = Vector2( 0, 10 )
+position = Vector2( 225.52, 34.6687 )
 shape = SubResource( 9 )
 
 [node name="finish" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
