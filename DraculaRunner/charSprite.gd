@@ -80,11 +80,11 @@ func _on_Area2D_body_entered(body):
 		health_update()
 	
 	if body.is_in_group("finish"):
-		pass #code to win game here
+		get_tree().change_scene("res://winscreen.tscn")
 		#probably want to have a YOU WIN screen show up with like "press any button to go to main menu" or something
 		#will need to write code for this AFTER the main menu is built
 	
 	if current_health == 0:
-		pass #code to end game here
+		get_tree().change_scene("res://gameover.tscn")
 		#some kind of GAME OVER or YOU LOSE screen, have button press send player back to main menu
 		#will need to write code for this AFTER the main menu is built

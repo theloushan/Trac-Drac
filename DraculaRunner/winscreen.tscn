@@ -1,0 +1,86 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://winmenu.gd" type="Script" id=1]
+[ext_resource path="res://assets/imgs/menu/gamewin.png" type="Texture" id=2]
+[ext_resource path="res://assets/audio/title.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/imgs/sprites/slide4.png" type="Texture" id=4]
+[ext_resource path="res://assets/imgs/sprites/run4.png" type="Texture" id=5]
+[ext_resource path="res://assets/imgs/sprites/slide3.png" type="Texture" id=6]
+[ext_resource path="res://assets/imgs/sprites/slide2.png" type="Texture" id=7]
+[ext_resource path="res://assets/imgs/Health/Dracula Health - Healthy.png" type="Texture" id=8]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="exit" type="Button" parent="ColorRect"]
+margin_left = 735.497
+margin_top = 339.049
+margin_right = 860.497
+margin_bottom = 410.049
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu" type="Button" parent="ColorRect"]
+margin_left = 162.697
+margin_top = 312.032
+margin_right = 330.697
+margin_bottom = 420.032
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ColorRect"]
+position = Vector2( 512.251, 299.923 )
+texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( 535.071, 243.836 )
+scale = Vector2( 0.540715, 0.540715 )
+frames = SubResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( 541.799, 474.241 )
+scale = Vector2( 0.258226, 0.258226 )
+frames = SubResource( 1 )
+frame = 3
+speed_scale = 2.0
+
+[connection signal="pressed" from="ColorRect/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="ColorRect/menu" to="." method="_on_menu_pressed"]
+[connection signal="ready" from="KinematicBody2D" to="." method="_on_KinematicBody2D_ready"]

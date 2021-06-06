@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://assets/imgs/menu/menu.png" type="Texture" id=2]
+[ext_resource path="res://assets/audio/title.mp3" type="AudioStream" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartButton" type="Button" parent="ColorRect"]
+anchor_right = 0.085
+anchor_bottom = 0.057
+margin_left = 236.0
+margin_top = 444.0
+margin_right = 345.96
+margin_bottom = 502.8
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="ColorRect"]
+anchor_right = 0.071
+anchor_bottom = 0.063
+margin_left = 614.649
+margin_top = 439.46
+margin_right = 683.945
+margin_bottom = 488.66
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="ColorRect"]
+position = Vector2( 512.359, 299.221 )
+scale = Vector2( 0.387589, 0.387589 )
+texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[connection signal="pressed" from="ColorRect/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="ColorRect/ExitButton" to="." method="_on_ExitButton_pressed"]

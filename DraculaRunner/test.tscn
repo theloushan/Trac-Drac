@@ -43,9 +43,14 @@ _data = {
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 37 ), ExtResource( 25 ), ExtResource( 32 ) ],
+"frames": [ ExtResource( 26 ), ExtResource( 29 ), ExtResource( 36 ) ],
 "loop": true,
-"name": "table",
+"name": "balloon",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 35 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "puppy",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 28 ), ExtResource( 31 ), ExtResource( 34 ) ],
@@ -58,51 +63,46 @@ animations = [ {
 "name": "butterfly",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 26 ), ExtResource( 29 ), ExtResource( 36 ) ],
+"frames": [ ExtResource( 37 ), ExtResource( 25 ), ExtResource( 32 ) ],
 "loop": true,
-"name": "balloon",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 35 ), ExtResource( 27 ) ],
-"loop": true,
-"name": "puppy",
+"name": "table",
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 29.6777, 69.7535 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 417.845, 636.742 )
 
-[sub_resource type="RectangleShape2D" id=9]
+[sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 66.8464, 532.582 )
 
-[sub_resource type="RectangleShape2D" id=10]
+[sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 67.3577, 516.499 )
 
-[sub_resource type="RectangleShape2D" id=11]
+[sub_resource type="RectangleShape2D" id=7]
 extents = Vector2( 267.203, 543.687 )
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 327.1, 654.277 )
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 78.7205, 34.2131 )
 
-[sub_resource type="RectangleShape2D" id=14]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 36.5977, 31.0047 )
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 40.5088, 49.6197 )
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 58.905, 44.4264 )
 
-[sub_resource type="RectangleShape2D" id=17]
+[sub_resource type="RectangleShape2D" id=13]
 extents = Vector2( 25.5195, 916.262 )
 
-[sub_resource type="SpriteFrames" id=5]
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
 "frames": [ ExtResource( 22 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 23 ) ],
 "loop": false,
@@ -130,13 +130,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 9.1825, 7.52779 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=16]
 extents = Vector2( 63.8564, 87.0849 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 32.1677, 32.002 )
 
 [node name="Node2D" type="Node2D"]
@@ -148,7 +148,7 @@ curve = SubResource( 1 )
 
 [node name="testEnviroFollow" type="PathFollow2D" parent="testEnviroPath"]
 position = Vector2( 1536.61, 191.022 )
-rotation = 3.14157
+rotation = -3.1415
 loop = false
 
 [node name="enviroment1" type="Sprite" parent="testEnviroPath/testEnviroFollow"]
@@ -186,7 +186,7 @@ script = ExtResource( 3 )
 speed = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideB"]
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 
 [node name="sunlightK" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -195,7 +195,7 @@ collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK"]
 position = Vector2( -147.32, 2.37839 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="sunlightK2" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -205,7 +205,7 @@ collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK2"]
 position = Vector2( 1.54822, -0.793671 )
-shape = SubResource( 9 )
+shape = SubResource( 5 )
 
 [node name="sunlightK3" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -214,7 +214,7 @@ position = Vector2( -1020.01, 41.2379 )
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK3"]
-shape = SubResource( 10 )
+shape = SubResource( 6 )
 
 [node name="sunlightK4" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -223,7 +223,7 @@ position = Vector2( -1592.33, 86.1521 )
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK4"]
-shape = SubResource( 11 )
+shape = SubResource( 7 )
 
 [node name="sunlightK5" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -233,7 +233,7 @@ collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK5"]
 position = Vector2( 1.54822, -0.793671 )
-shape = SubResource( 9 )
+shape = SubResource( 5 )
 
 [node name="sunlightK6" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -243,7 +243,7 @@ collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK6"]
 position = Vector2( -147.32, 2.37839 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="sunlightK7" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -252,7 +252,7 @@ position = Vector2( -4364.45, 76.8489 )
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK7"]
-shape = SubResource( 10 )
+shape = SubResource( 6 )
 
 [node name="sunlightK8" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -261,7 +261,7 @@ position = Vector2( -4934.75, 129.262 )
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK8"]
-shape = SubResource( 11 )
+shape = SubResource( 7 )
 
 [node name="sunlightK9" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -271,7 +271,7 @@ collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK9"]
 position = Vector2( 1.54822, -0.793671 )
-shape = SubResource( 9 )
+shape = SubResource( 5 )
 
 [node name="sunlightK10" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "sunlight",
@@ -280,7 +280,7 @@ position = Vector2( -6742.41, 26.9802 )
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/sunlightK10"]
-shape = SubResource( 12 )
+shape = SubResource( 8 )
 
 [node name="jumpT" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -298,7 +298,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpT"]
 position = Vector2( 0, 10 )
-shape = SubResource( 13 )
+shape = SubResource( 9 )
 
 [node name="slideF" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -315,7 +315,7 @@ animation = "butterfly"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideF"]
-shape = SubResource( 14 )
+shape = SubResource( 10 )
 
 [node name="slideT" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -334,7 +334,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideT"]
 position = Vector2( 0, -20 )
-shape = SubResource( 15 )
+shape = SubResource( 11 )
 
 [node name="jumpP" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -352,7 +352,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpP"]
 position = Vector2( 9.8584, -0.594604 )
-shape = SubResource( 16 )
+shape = SubResource( 12 )
 
 [node name="jumpP2" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -370,7 +370,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpP2"]
 position = Vector2( 9.8584, -0.594604 )
-shape = SubResource( 16 )
+shape = SubResource( 12 )
 
 [node name="jumpT2" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -388,7 +388,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpT2"]
 position = Vector2( 0, 10 )
-shape = SubResource( 13 )
+shape = SubResource( 9 )
 
 [node name="slideF2" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -405,7 +405,7 @@ animation = "butterfly"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideF2"]
-shape = SubResource( 14 )
+shape = SubResource( 10 )
 
 [node name="slideB2" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -422,7 +422,7 @@ animation = "balloon"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideB2"]
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 
 [node name="jumpT3" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -440,7 +440,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpT3"]
 position = Vector2( 0, 10 )
-shape = SubResource( 13 )
+shape = SubResource( 9 )
 
 [node name="jumpP3" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -458,7 +458,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpP3"]
 position = Vector2( 9.8584, -0.594604 )
-shape = SubResource( 16 )
+shape = SubResource( 12 )
 
 [node name="slideB3" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -475,7 +475,7 @@ animation = "balloon"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideB3"]
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 
 [node name="slideB4" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -492,7 +492,7 @@ animation = "balloon"
 flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideB4"]
-shape = SubResource( 8 )
+shape = SubResource( 3 )
 
 [node name="slideT2" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -511,7 +511,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/slideT2"]
 position = Vector2( 0, -20 )
-shape = SubResource( 15 )
+shape = SubResource( 11 )
 
 [node name="jumpT4" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "obstacle",
@@ -529,7 +529,7 @@ flip_v = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/jumpT4"]
 position = Vector2( 0, 10 )
-shape = SubResource( 13 )
+shape = SubResource( 9 )
 
 [node name="finish" type="KinematicBody2D" parent="testEnviroPath/testEnviroFollow" groups=[
 "finish",
@@ -539,7 +539,7 @@ collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="testEnviroPath/testEnviroFollow/finish"]
 position = Vector2( 296.676, 6.74054 )
-shape = SubResource( 17 )
+shape = SubResource( 13 )
 
 [node name="Character" type="KinematicBody2D" parent="."]
 position = Vector2( 145, 410 )
@@ -550,7 +550,7 @@ speed = 1000
 [node name="charSprite" type="AnimatedSprite" parent="Character"]
 position = Vector2( 0, -80 )
 scale = Vector2( 0.2, 0.2 )
-frames = SubResource( 5 )
+frames = SubResource( 14 )
 animation = "cover"
 frame = 1
 speed_scale = 2.0
@@ -559,14 +559,14 @@ playing = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character"]
 position = Vector2( 0, -80 )
 scale = Vector2( 6.75, 11.25 )
-shape = SubResource( 6 )
+shape = SubResource( 15 )
 
 [node name="Area2D" type="Area2D" parent="Character"]
 collision_mask = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Character/Area2D"]
 position = Vector2( 0, -80 )
-shape = SubResource( 7 )
+shape = SubResource( 16 )
 
 [node name="Mouse" type="KinematicBody2D" parent="."]
 position = Vector2( 600, 250 )
@@ -582,14 +582,13 @@ texture = ExtResource( 11 )
 
 [node name="testMouseSpriteCol" type="CollisionShape2D" parent="Mouse"]
 position = Vector2( -0.148651, 4.70201 )
-shape = SubResource( 4 )
+shape = SubResource( 17 )
 disabled = true
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="Polygon2D" type="Polygon2D" parent="HUD"]
 position = Vector2( 6.10352e-05, 1.19209e-07 )
-scale = Vector2( 1, 1 )
 color = Color( 0.439216, 0.192157, 0.611765, 1 )
 polygon = PoolVector2Array( 617.423, 16.7736, 616.862, 85.2438, 990.401, 85.3063, 990.931, 16.4412 )
 
@@ -652,6 +651,7 @@ __meta__ = {
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 10 )
+autoplay = true
 
 [connection signal="health" from="Character" to="HUD/HBoxContainer" method="_on_Character_health"]
 [connection signal="body_entered" from="Character/Area2D" to="Character" method="_on_Area2D_body_entered"]
