@@ -4,7 +4,7 @@ extends AnimatedSprite
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-onready var path_follow = get_parent()
+onready var path_follow = get_parent().get_parent()
 onready var _animated_sprite = get_node('../obstacle')
 
 export (int) var speed = 150

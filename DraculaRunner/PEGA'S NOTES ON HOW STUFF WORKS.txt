@@ -1,0 +1,59 @@
+TO GALTORN OR CORY OR WHOEVER IS READING THIS:
+
+here is what I figured out while working on this from like midnight to 4 am
+===============================================================================
+collision for damage/indicators need some major parts
+
+FIRST
+need an area2d under the character that's bigger than its hitbox
+hitbox is necessary for moving the kinematic body
+area2d necessary to register interactions with other area2d nodes
+
+SECOND
+set a signal from the character's area2d going to the parent character
+this will send the native area2d functions to the parent for interpretting when it hits stuff
+for this game, we're passing "_on_Area2D_body_entered(body)" since it allows us to check the collided object's group
+
+THIRD
+under the node tab on the right for each "obstacle" and "sunlight" node set the group
+can see what the groups are by clicking "manage groups"
+just type the group you want to add it to and click the add button, don't do it through manage groups
+this denotes what type of object the collider is
+
+FOURTH
+under the "_on_Area2D_body_entered(body)" function, use "if body.is_in_group("GROUPNAME")" to check the object
+the overall func will fire off when the character collides with ANY Area2D node
+the if statement will check the collided Area2D and will execute the contained code if it matches the specific group
+
+FIFTH
+write the code for whatever you need it to do when it hits that particular object
+the only things we really need to worry about is decrementing health during those collisions
+I also made the end point of the map a "finish" Area2D, so we know when the player reaches the end
+Maybe can write some code to switch the player to the Standing anim at that point? Up to you guys
+
+SIXTH - VERY IMPORTANT
+go over each object that is going to have collisions
+set them each to whatever layers they should be placed on
+set layers by going to the right side under the Inspector tab for the Kinematic node (Character, SunlightK, etc)
+look under "Collision" under the "PhysicsBody2D" section there
+layers can be named in "Project Settings" on the top of the screen
+set the "Layer" setting to the specific layer that the node exists on
+set the "Mask" setting to the specific node type you want to collide with
+so for the character, it's on the "player" layer and should mask to the "obstacle", "sunlight", and "finish" layers
+for the obstacles, it should be on the "obstacle" layer and should mask to the "player" layer
+this tells the engine that this object should only collide with objects on the respective layers
+COLLISION WILL NOT WORK UNLESS YOU DO THIS
+==================================================================================
+getting music working
+
+FIRST
+create an "AudioStreamPlayer" node in the scene
+if doing sound effects or positional audio, use "AudioStreamPlayer2D" or "AudioStreamPlayer3D" instead
+
+SECOND
+load the audio file in the "Inspector" tab in the "Stream" section
+
+THIRD
+check the box next to "Autoplay" in the "Inspector" tab
+audio is ALREADY loaded for the level music, have it set to not play atm, just check "Autoplay" and it'll run
+====================================================================================

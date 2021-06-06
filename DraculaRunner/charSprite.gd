@@ -20,16 +20,11 @@ var default_position = Vector2()
 
 var current_state = "run"
 
-signal action(charS_act)
-
 func set_animation():
 	animated_sprite.play(current_state)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(_delta: float) -> void:
-	act_pos = (get_viewport().get_mouse_position() - self.position)
-	charS_act = act_pos.y / 100
-	emit_signal("action", charS_act)
 	set_animation()
 	get_boundaries()
 
@@ -41,18 +36,22 @@ func _input(event):
 				current_state = "fly"
 				running = false
 				position = Vector2(default_position.x, upper_bound)
+				#print("flying")
 			elif mouse_pos.y > lower_bound:
 				current_state = "slide"
 				running = false
 				position = Vector2(default_position.x, lower_bound + 100)
+				#print("sliding")
 			elif mouse_pos.y > upper_bound and mouse_pos.y < lower_bound and running == false:
 				current_state = "run"
 				running = true
 				position = default_position
+				#print("running")
 			else:
 				current_state = "cover"
 				running = false
 				position = default_position
+				#print("covering")
 			
 			set_animation()
 
@@ -63,11 +62,29 @@ func get_boundaries():
 		lower_bound = y_boundary * 2
 		default_position.y = lower_bound + 10
 
-func _on_Area2D_body_enter(body):
-	if body.is_in_group("sunlight") and current_state != "cover":
-		current_health = current_health - 1
-		emit_signal("health", current_health)
-
 func _ready():
 	default_position = position
 	get_boundaries()
+	print("start")
+
+func health_update():
+	current_health = current_health - 1
+	emit_signal("health", current_health)
+
+func _on_Area2D_body_entered(body):
+	#print("in sunlight, out of if")
+	if body.is_in_group("sunlight") and current_state != "cover":
+		health_update()
+	
+	if body.is_in_group("obstacle"):
+		health_update()
+	
+	if body.is_in_group("finish"):
+		pass #code to win game here
+		#probably want to have a YOU WIN screen show up with like "press any button to go to main menu" or something
+		#will need to write code for this AFTER the main menu is built
+	
+	if current_health == 0:
+		pass #code to end game here
+		#some kind of GAME OVER or YOU LOSE screen, have button press send player back to main menu
+		#will need to write code for this AFTER the main menu is built
