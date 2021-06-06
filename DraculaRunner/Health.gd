@@ -13,6 +13,8 @@ var health_bump1 = preload("res://assets/imgs/health/Dracula Health - Bump1.png"
 var health_bump2 = preload("res://assets/imgs/health/Dracula Health - Bump2.png")
 var health_bump3 = preload("res://assets/imgs/health/Dracula Health - Bump3.png")
 
+var current_health = 4
+
 #functions
 func update_health(value):
 	for i in get_child_count():
@@ -29,7 +31,6 @@ func update_health(value):
 				break
 		elif value == 1:
 			get_child(i).texture = health_bump3
-		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -41,3 +42,7 @@ func _process(_delta):
 			else:
 				get_child(i).rect_rotation = 0
 		t = 0
+
+func _on_Character_health(new_health):
+	current_health = new_health
+	update_health(current_health)
